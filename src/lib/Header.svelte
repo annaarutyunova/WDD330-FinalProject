@@ -19,18 +19,15 @@
     #logo{
         /* font-family: 'Indie Flower', cursive; */
         font-size: 1.6em;
-        margin: 5px;
     }
-    @media only screen and (min-width: 500){
+    @media only screen and (min-width: 500px){
         #header{
-            background-color: #2b2118;
-            color: white;
-            padding: 0 10px;
-            display: flex;
-            justify-content: space-between;
-            font-family: 'Indie Flower', cursive;
+            padding: 0 20px;
         }
         #logo{
+            font-size: 2em;
+        }
+        #signin{
             font-size: 1.6em;
         }
     }
