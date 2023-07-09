@@ -1,11 +1,13 @@
 <script>
+  import Nav from './Nav.svelte';
 </script>
 
 <div id="header">
-  <p id="logo">Memer</p>
-  <p id="signin">Sign In</p>
-  <a href="/create">Create</a>
+  <p id="logo"><a href="#">Memer</a></p>
+  <p id="signin"><a href="#">Sign In</a></p>
+  <a href="/create/">Create</a>
 </div>
+<Nav />
 
 <style>
   #header {
@@ -32,6 +34,29 @@
     }
     #logo {
       font-size: 1.6em;
+    }
+    #logo a {
+      /* font-family: 'Indie Flower', cursive; */
+      text-decoration: none;
+      font-size: 1.4em;
+      color: white;
+    }
+
+    #signin a {
+      text-decoration: none;
+      font-size: 1.4em;
+      color: white;
+    }
+    @media only screen and (min-width: 500px) {
+      #header {
+        padding: 0 20px;
+      }
+      #logo a {
+        font-size: 2em;
+      }
+      #signin a {
+        font-size: 1.6em;
+      }
     }
   }
 </style>
