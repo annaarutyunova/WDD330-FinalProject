@@ -1,15 +1,16 @@
 <script>
   import Header from './lib/Header.svelte'
   import Main from './lib/Main.svelte'
+  import Footer from './lib/Footer.svelte'
 </script>
+<body>
 <Header />
-<main>
-  <Main />
- 
-</main>
+<Main />
+<Footer />
+</body>
 
-<!-- <style>
-  .logo {
+<style>
+  /* .logo {
     height: 6em;
     padding: 1.5em;
     will-change: filter;
@@ -23,5 +24,8 @@
   }
   .read-the-docs {
     color: #888;
+  } */
+  body {
+    background-color: #1E1E1E;
   }
-</style> -->
+</style>
