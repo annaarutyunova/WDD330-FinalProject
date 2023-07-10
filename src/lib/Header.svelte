@@ -1,11 +1,12 @@
 <script>
-
+    import Nav from './Nav.svelte'
 </script>
 
 <div id="header">
-        <p id="logo">Memer</p>
-        <p id="signin">Sign In</p>
+        <p id="logo"><a href="#">Memer</a></p>
+        <p id="signin"><a href="#">Sign In</a></p>
 </div>
+<Nav />
 
 <style>
     #header{
@@ -16,18 +17,26 @@
     justify-content: space-between;
     font-family: 'Indie Flower', cursive;
 }
-    #logo{
+    #logo a{
         /* font-family: 'Indie Flower', cursive; */
-        font-size: 1.6em;
+        text-decoration: none;
+        font-size: 1.4em;
+        color:white;
     }
+
+    #signin a{
+            text-decoration: none;
+            font-size: 1.4em;
+            color:white;
+        }
     @media only screen and (min-width: 500px){
         #header{
             padding: 0 20px;
         }
-        #logo{
+        #logo a{
             font-size: 2em;
         }
-        #signin{
+        #signin a{
             font-size: 1.6em;
         }
     }

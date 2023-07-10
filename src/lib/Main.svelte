@@ -28,6 +28,7 @@ meme2 = memes[Math.floor(Math.random() * memes.length)];
     <a id="logoPhone" href="#"><p>Sign In</p></a>
 </div>
 
+
 <style>
     #welcome{
         display:block;
@@ -62,28 +63,36 @@ meme2 = memes[Math.floor(Math.random() * memes.length)];
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
             place-items: center;
-            margin-top: 50px;
         }
         #welcome{
-            grid-column: 2;
+            grid-column: 1/4;
             margin: auto;
             font-size: 3em;
         }
         #welcomeMeme2{
             display: block;
-            width: 250px;
-            height:250px;
+            width: 180px;
+            height:180px;
             grid-column: 1;
-            grid-row: 1;
+            grid-row: 2;
+            padding-top: 50px;
         }
         #welcomeMeme1{
+            width: 180px;
+            height:180px;
             grid-column: 3;
+            grid-row: 2;
+            margin-top: 0;
+            padding-top: 50px;
         }
         #logoPhone{
             grid-column: 2;
         }
     }
     @media only screen and (min-width: 900px){
+        #welcomeMemes{
+            margin-top: 50px;
+        }
         #welcomeMeme1, #welcomeMeme2{
             display: block;
             width: 250px;
@@ -91,6 +100,11 @@ meme2 = memes[Math.floor(Math.random() * memes.length)];
             margin: 20px auto 0;;
             margin: 0;
             padding: 0;
+        }
+        #welcome{
+            grid-column: 2;
+            margin: auto;
+            font-size: 3em;
         }
 
     }
