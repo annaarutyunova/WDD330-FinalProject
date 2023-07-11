@@ -1,6 +1,6 @@
 <script>
-    import { getUserProfile, setUserProfile } from "./supabaseClient.mjs";
-    import { userStore } from "./stores.mjs";
+    import { getUserProfile, setUserProfile } from "../js/supabaseClient.mjs";
+    import { userStore } from "../js/stores.mjs";
     import { onMount } from "svelte";
   
     let loading = false;

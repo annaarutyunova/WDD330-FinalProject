@@ -1,6 +1,6 @@
 <script>
-    import { route } from "./stores.mjs";
-    import { supabase, login, signUp } from "./supabaseClient.mjs";
+    import { route } from "../js/stores.mjs";
+    import { supabase, login, signUp } from "../js/supabaseClient.mjs";
   
     let loading = false;
     let email = "";
