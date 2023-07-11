@@ -1,10 +1,11 @@
 <script>
   import Nav from './Nav.svelte';
+  import NavBar from './NavBar.svelte';
 </script>
 
 <div id="header">
   <p id="logo"><a href="#">Memer</a></p>
-  <p id="signin"><a href="#">Sign In</a></p>
+  <NavBar />
 </div>
 <Nav />
 

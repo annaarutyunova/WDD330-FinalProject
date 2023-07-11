@@ -15,16 +15,22 @@
 
   let meme;
   let meme2;
+  function getMemes() {
+    meme = memes[Math.floor(Math.random() * memes.length)];
+    meme2 = memes[Math.floor(Math.random() * memes.length)];
 
-  meme = memes[Math.floor(Math.random() * memes.length)];
-  meme2 = memes[Math.floor(Math.random() * memes.length)];
+    while (meme2 == meme) {
+      meme2 = memes[Math.floor(Math.random() * memes.length)];
+    }
+  }
+  getMemes();
 </script>
 
 <!-- <h1 id="welcome">Welcome to the jungle of meme</h1>        -->
 <div id="welcomeMemes">
   <h1 id="welcome">Welcome to the jungle of meme</h1>
-  <img id="welcomeMeme1" src={meme} alt="cat smilling" />
-  <img id="welcomeMeme2" src={meme2} alt="cat lick" />
+  <img id="welcomeMeme1" src={meme} alt="random meme" />
+  <img id="welcomeMeme2" src={meme2} alt="random meme" />
   <a id="logoPhone" href="#"><p>Sign In</p></a>
 </div>
 
@@ -87,8 +93,12 @@
       margin-top: 0;
       padding-top: 50px;
     }
-    #logoPhone {
-      grid-column: 2;
+    #logoPhone p {
+      text-align: center;
+      padding: 10px 20px;
+      border: 1px solid white;
+      color: white;
+      font-size: 1.6em;
     }
   }
   @media only screen and (min-width: 900px) {
