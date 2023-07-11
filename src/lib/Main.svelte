@@ -54,8 +54,8 @@ meme2 = memes[Math.floor(Math.random() * memes.length)];
     #logoPhone p{
         text-align:center;
         padding: 10px 20px;
-        border: 1px solid #2b2118;
-        color: black;
+        border: 1px solid white;
+        color: white;
         font-size: 1.6em;
     }
     @media only screen and (min-width: 500px){
