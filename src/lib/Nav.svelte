@@ -13,7 +13,7 @@
 
 <style>
   ul {
-    background-color: #2b2118;
+    /* background-color: #2b2118; */
     display: flex;
     width: 100%;
     margin: 0 auto;
