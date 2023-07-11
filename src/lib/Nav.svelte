@@ -1,14 +1,14 @@
 <script></script>
 
 <ul>
-  <li>HOME</li>
+  <li><a href="/">HOME</a></li>
   <li><a href="/create/">CREATE</a></li>
   <li>MORE</li>
 </ul>
 
 <style>
   ul {
-    background-color: #2b2118;
+    /* background-color: #2b2118; */
     display: flex;
     width: 100%;
     margin: 0 auto;

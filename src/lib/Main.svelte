@@ -105,8 +105,7 @@
     #welcomeMemes {
       margin-top: 50px;
     }
-    #welcomeMeme1,
-    #welcomeMeme2 {
+    #welcomeMeme1, #welcomeMeme2 {
       display: block;
       width: 250px;
       height: 250px;

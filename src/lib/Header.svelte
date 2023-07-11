@@ -4,7 +4,7 @@
 </script>
 
 <div id="header">
-  <p id="logo"><a href="#">Memer</a></p>
+  <p id="logo"><a href="/">Memer</a></p>
   <NavBar />
 </div>
 <Nav />
