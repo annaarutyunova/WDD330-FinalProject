@@ -27,7 +27,7 @@
         height: 4px;
         bottom: 0;
         left: 0;
-        background-color: black;
+        background-color: white;
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
     }
