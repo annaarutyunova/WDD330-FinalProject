@@ -11,7 +11,7 @@
 
 <style>
   #header {
-    background-color: #2b2118;
+    background-color: #6f1a07;
     color: white;
     padding: 0 10px;
     display: flex;
