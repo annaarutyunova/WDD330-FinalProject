@@ -6,7 +6,7 @@
     <h1 id="welcome">Welcome to the jungle of meme</h1>   
     <img id="welcomeMeme1" src="https://media.tenor.com/OeswMjtpFdQAAAAM/cat.gif" alt="cat smilling" />
     <img id=welcomeMeme2 src="https://media.tenor.com/fREyFxrehi0AAAAd/cat-lick-cat.gif" alt="cat lick" />
-    <a id="logoPhone" href="#"><p>Sign In</p></a>
+    <a id="logoPhone" href="#login"><p>Sign In</p></a>
 </div>
 
 
