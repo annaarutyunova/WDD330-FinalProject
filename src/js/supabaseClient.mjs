@@ -1,13 +1,17 @@
-import { createClient } from "@supabase/supabase-js";
-import { userStore, route } from "./stores.mjs";
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
+import { createClient } from '@supabase/supabase-js';
+import { userStore, route } from './stores.mjs';
+const supabaseUrl =
+  import.meta.env.VITE_SUPABASE_URL ||
+  'https://yejorksvqshakzitkpnq.supabase.co';
+const supabaseKey =
+  import.meta.env.VITE_SUPABASE_KEY ||
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inllam9ya3N2cXNoYWt6aXRrcG5xIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg2ODAxMTAsImV4cCI6MjAwNDI1NjExMH0.guFkX56utJciF9QZTHvq73ULuvYiC2oFJgJX7kRYEUo';
 export const supabase = createClient(supabaseUrl, supabaseKey);
 
 export async function signUp({ email, password }) {
   let { data, error } = await supabase.auth.signUp({
     email,
-    password
+    password,
   });
   return { data, error };
 }
@@ -15,7 +19,7 @@ export async function signUp({ email, password }) {
 export async function login({ email, password }) {
   let { data, error } = await supabase.auth.signInWithPassword({
     email,
-    password
+    password,
   });
   if (data) {
     userStore.set({ user: data.user, isLoggedIn: true });
@@ -33,7 +37,7 @@ export async function logout() {
 }
 export async function getSession() {
   const {
-    data: { session }
+    data: { session },
   } = await supabase.auth.getSession();
   console.log(session);
   if (session) userStore.set({ user: session.user, isLoggedIn: true });
@@ -42,17 +46,17 @@ export async function getSession() {
 
 export async function getUserProfile(id) {
   let { data: profiles, error } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", id)
+    .from('profiles')
+    .select('*')
+    .eq('id', id)
     .single();
   console.log(profiles);
   return profiles;
 }
 export async function setUserProfile(id, profile) {
   const { data, error } = await supabase
-    .from("profiles")
+    .from('profiles')
     .update(profile)
-    .eq("id", id);
+    .eq('id', id);
   return error;
 }

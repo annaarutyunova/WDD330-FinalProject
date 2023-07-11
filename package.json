@@ -2,10 +2,12 @@
   "name": "meme",
   "private": true,
   "version": "0.0.0",
+  "main": "main.js",
   "type": "module",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --emptyOutDir",
     "preview": "vite preview"
   },
   "devDependencies": {
