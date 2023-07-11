@@ -5,7 +5,6 @@
 <div id="header">
   <p id="logo"><a href="#">Memer</a></p>
   <p id="signin"><a href="#">Sign In</a></p>
-  <a href="/create/">Create</a>
 </div>
 <Nav />
 
