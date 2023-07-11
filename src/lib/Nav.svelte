@@ -1,9 +1,14 @@
-<script></script>
+<script>
+  import {userStore} from "../js/stores.mjs"
+</script>
 
 <ul>
   <li><a href="/">HOME</a></li>
+  {#if userStore.isLoggedIn} 
   <li><a href="/create/">CREATE</a></li>
-  <li>MORE</li>
+  <li><a href="/profile/">PROFILE</a></li>
+  {/if}
+
 </ul>
 
 <style>
