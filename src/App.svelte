@@ -1,6 +1,7 @@
 <script>
   import Header from './lib/Header.svelte'
   import Main from './lib/Main.svelte'
+  import Footer from './lib/Footer.svelte'
   import Login from "./lib/Login.svelte";
   import { userStore, route } from "./lib/stores.mjs";
   import { getSession, logout, getUserProfile } from "./lib/supabaseClient.mjs";
@@ -48,7 +49,9 @@
   };
 
   onMount(init);
+
 </script>
+<body>
 <Header />
 {#if $route === "#profile"}
 <UserProfile />
@@ -60,3 +63,12 @@
 
  
 </main>
+<Main />
+<Footer />
+</body>
+
+<style>
+  body {
+    background-color: #1E1E1E;
+  }
+</style>

@@ -1,18 +1,7 @@
-/* Phone View */
-/* :root {
-    font-family: 'Indie Flower', cursive;
-    font-family: 'Bagel Fat One', cursive;
-    line-height: 1.5;
-    font-weight: 400;
-} */
 body {
     width: 100%;
     margin: 0;
     font-family: 'Bagel Fat One', cursive;
+    color:white;
 }
 
-/* @media only screen and (min-width: 500px){
-}
-@media only screen and (min-width: 900px){
-
-} */
