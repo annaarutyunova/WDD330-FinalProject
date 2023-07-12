@@ -37,7 +37,10 @@
 
   function handleImgClick(event) {
     let selectedImgUrl = event.target.src;
-    console.log(selectedImgUrl);
+    if (!selectedImgUrl) return;
+
+    image = images.find((imgObj) => imgObj.url == selectedImgUrl);
+    // console.log(image);
   }
 
   onMount(getImages);
@@ -49,11 +52,9 @@
   {:then imageCollection}
     {#each imageCollection as image}
       <div class="image-block">
-        <img
-          src={image.url}
-          alt={image.name}
-          on:click|preventDefault={handleImgClick}
-        />
+        <button type="button" on:click|preventDefault={handleImgClick}>
+          <img src={image.url} alt={image.name} />
+        </button>
       </div>
     {/each}
   {/await}
@@ -62,10 +63,19 @@
 <style>
   #images {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
     align-items: center;
     justify-items: center;
+  }
+  .image-block {
+    width: 200px;
+    height: 200px;
+    display: flex;
+  }
+  .image-block button {
+    background-color: #2b2118;
+    border: 0;
   }
   .image-block img {
     width: 100%;
