@@ -124,7 +124,7 @@
       font-size: 2.4em;
     }
     form{
-      width: 60%;
+      width: 40%;
     }
     #memes{
       width: 90%;

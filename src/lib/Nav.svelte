@@ -6,13 +6,16 @@
   function init() {
     getSession();
   }
+  function print(){
+    console.log("URL", windows.location)
+  }
   onMount(init);
 </script>
 
 <ul>
   <li><a href="/">HOME</a></li>
   {#if $userStore.isLoggedIn}
-    <li><a href="/profile/">PROFILE</a></li>
+    <li><a href="/profile/" on:click={print}>PROFILE</a></li>
     <li><a href="/create/">CREATE</a></li>
     <li><button type="button" on:click={logout}>LOGOUT</button></li>
   {:else}
