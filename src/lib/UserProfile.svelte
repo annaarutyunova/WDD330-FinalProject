@@ -36,7 +36,7 @@
     onMount(init);
   </script>
   {#if userProfile.full_name != null}
-  <h2>Welcome {userProfile.full_name}</h2>
+  <h2 id="welcome">Welcome {userProfile.full_name}</h2>
   {:else if userProfile.username != null}
   <h2 id="welcome"> Welcome {userProfile.username}</h2>
   {:else}
@@ -143,8 +143,8 @@
     #memes{
       width: 90%;
       margin: 40px auto;
-      gap: 0;
-      row-gap: 40px;
+      gap: 20px;
+      row-gap: 20px;
     }
     #forImg{
       width: 30%;
@@ -157,7 +157,7 @@
     }
   }
   @media only screen and (min-width: 900px) {
-    form{
+    /* form{
       width: 40%;
     }
     #memes{
@@ -166,7 +166,7 @@
     #forImg{
       width: 20%;
       margin: 0 auto;
-    }
+    } */
  
   }
 </style>
