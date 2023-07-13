@@ -56,3 +56,23 @@ export async function setUserProfile(id, profile) {
     .eq('id', id);
   return error;
 }
+
+
+// Save meme to the database
+export async function saveMeme(link, name){
+  const { error } = await supabase
+  .from('memes')
+  .insert({ "url": link, "name": name })
+  return error;
+}
+
+// Pull meme from the database
+export async function getMeme(id) {
+  let { data: memes, error } = await supabase
+    .from('memes')
+    .select('*')
+    .eq('id', id)
+    .single();
+  console.log(memes);
+  return memes;
+}
