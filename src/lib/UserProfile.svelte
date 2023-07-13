@@ -9,11 +9,11 @@
     async function handleSubmit(e) {
       try {
         loading = true;
-        const profile = {};
+        const userProfile = {};
         const formData = new FormData(e.target);
-        profile.full_name = formData.get("full_name");
-        profile.website = formData.get("website");
-        const error = setUserProfile($userStore.user.id, profile);
+        userProfile.full_name = formData.get("full_name");
+        userProfile.website = formData.get("website");
+        const error = setUserProfile($userStore.user.id, userProfile);
         if (error) throw error;
       } catch (err) {
         console.log(err);
@@ -25,7 +25,8 @@
     async function init() {
       profile = await getUserProfile($userStore.user.id);
       memes = await getMeme($userStore.user.id);
-      console.log(memes);
+      console.log(memes[0].url);
+      console.log(profile.full_name)
     }
 
   
@@ -33,7 +34,7 @@
     onMount(init);
   </script>
   
-  <h2>User Profile</h2>
+  <h2>Welcome </h2>
   <form on:submit|preventDefault={handleSubmit}>
     <div>
       <label for="website">Website</label>
@@ -68,4 +69,9 @@
       </button>
     </div>
   </form>
+  <div id="memes">
+    {#each memes as meme}
+    <img src={meme.url} alt="random meme"/>
+    {/each}
+  </div>
 
