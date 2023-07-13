@@ -9,11 +9,11 @@
     async function handleSubmit(e) {
       try {
         loading = true;
-        const userProfile = {};
+        const profile = {};
         const formData = new FormData(e.target);
-        userProfile.full_name = formData.get("full_name");
-        userProfile.website = formData.get("website");
-        const error = setUserProfile($userStore.user.id, userProfile);
+        profile.full_name = formData.get("full_name");
+        profile.website = formData.get("website");
+        const error = setUserProfile($userStore.user.id, profile);
         if (error) throw error;
       } catch (err) {
         console.log(err);
@@ -21,20 +21,28 @@
         loading = false;
       }
     }
-  
+
+    let userProfile = {};
     async function init() {
-      profile = await getUserProfile($userStore.user.id);
+      userProfile = await getUserProfile($userStore.user.id);
       memes = await getMeme($userStore.user.id);
       console.log(memes[0].url);
-      console.log(profile.full_name)
+      console.log(getUserProfile($userStore.user.id));
+      // console.log(userPprofile.full_name)
     }
 
   
   
     onMount(init);
   </script>
+  {#if userProfile.full_name != null}
+  <h2>Welcome {userProfile.full_name}</h2>
+  {:else if userProfile.username != null}
+  <h2 id="welcome"> Welcome {userProfile.username}</h2>
+  {:else}
+  <h2 id="welcome"> Welcome to your Profile</h2>
+  {/if}
   
-  <h2 id="welcome">Welcome </h2>
   <form on:submit|preventDefault={handleSubmit}>
     <div>
       <label for="website">Website</label><br>
