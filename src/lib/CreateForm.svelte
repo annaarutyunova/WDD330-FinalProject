@@ -70,12 +70,15 @@
     font-family: 'Indie Flower', cursive;
     margin-bottom: 50px; 
   }
+  button{
+    background-color: black;
+  }
 
   @media only screen and (min-width: 900px) {
     #createMemeHeader {
       margin-top: 70px;
       margin-bottom: 80px; 
       font-size: 2.6em;
-  }
+    }
   }
 </style>

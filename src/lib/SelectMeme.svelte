@@ -99,6 +99,7 @@
   .image-block img {
     width: 100%;
   }
+
   }
   @media only screen and (min-width: 900px) {
     #images {
