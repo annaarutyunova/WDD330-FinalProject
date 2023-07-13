@@ -94,6 +94,7 @@
       grid-column: 1/4;
       margin: auto;
       font-size: 3em;
+      padding-top: 30px;
     }
     #welcomeMeme2 {
       display: block;

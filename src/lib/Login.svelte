@@ -86,5 +86,56 @@
 </div>
 
 <style>
+  /* font-family: 'Bagel Fat One', cursive; */
+  /* font-family: 'Indie Flower', cursive; */
+  .description{
+      font-family: 'Indie Flower', cursive;
+      text-align: center;
+      font-size: 2em;
+  }
+  form{
+    font-family: 'Indie Flower', cursive;
+    width: 80%;
+    margin: 0 auto;
+  }
+  label{
+    font-size: 1.6em;
+  }
+  input{
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.4em;
+    width: 100%;
+    height: 35px;
+    margin: 0 0 20px;
+  }
+  button{
+    /* margin-top: 20px; */
+    font-family: 'Indie Flower', cursive;
+    padding: 2px 16px;
+    font-size: 1.4em;
+    background-color: rgb(111,26,7);
+    color: white;
+    border: none;
+    margin-bottom: 50px;
+  }
+  
+  @media only screen and (min-width: 500px) {
+    .description{
+      font-size: 2.4em;
+    }
+    form{
+      width: 60%;
+    }
+    
+    button{
+      margin-bottom: 100px;
+    }
+ 
+  }
+  @media only screen and (min-width: 900px) {
+    form{
+      width: 40%;
+    }
+  }
   
 </style>
