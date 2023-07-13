@@ -157,16 +157,6 @@
     }
   }
   @media only screen and (min-width: 900px) {
-    /* form{
-      width: 40%;
-    }
-    #memes{
-      width: 80%;
-    }
-    #forImg{
-      width: 20%;
-      margin: 0 auto;
-    } */
  
   }
 </style>
