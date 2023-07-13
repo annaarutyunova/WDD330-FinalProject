@@ -8,10 +8,16 @@
     
 </div>
 <style>
+    /* font-family: 'Bagel Fat One', cursive; */
+        /* font-family: 'Indie Flower', cursive; */
     .footer {
         background-color: #A8763E;
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
+        display:flex;
+        justify-content: space-around;
+        gap: 15px;
+        font-family: 'Indie Flower', cursive;
+        padding: 0 12px;
+        font-size: 1.2em;
     }
     p {
         color: black;

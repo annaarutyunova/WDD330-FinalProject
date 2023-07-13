@@ -21,13 +21,16 @@
 </ul>
 
 <style>
-  ul {
+  ul{
     /* background-color: #2b2118; */
     display: flex;
     width: 100%;
     margin: 0 auto;
     justify-content: space-evenly;
     padding: 20px 0;
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 1.3em;
+
   }
   ul li {
     display: inline-block;
@@ -50,6 +53,15 @@
   ul li:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+  button{
+    background-color: transparent;
+    border: none;
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 1em;
+    color:white;
+    padding:0;
+
   }
 
   @media only screen and (min-width: 500px) {

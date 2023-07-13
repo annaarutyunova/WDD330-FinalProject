@@ -33,16 +33,24 @@
   <img id="welcomeMeme2" src={meme2} alt="random meme" />
   <a id="signinButton" href="/login/"><p>Sign In</p></a>
 </div>
+<div id="juices">
+  <p>Get your creative juices 
+    flowing as you dive into the world of meme creation. 
+    With Memer's easy-to-use tools and an abundance of templates, 
+    you'll be meme-ing like a pro in no time</p>
+</div>
 
 <style>
   #welcomeMemes {
-    background-color: #2b2118;
+    /* font-family: 'Bagel Fat One', cursive; */
+        /* font-family: 'Indie Flower', cursive; */
   }
   #welcome {
     display: block;
     max-width: 80%;
     text-align: center;
     margin: 20px auto;
+    font-family: 'Bagel Fat One', cursive;
   }
   #welcomeMeme1 {
     display: block;
@@ -58,13 +66,23 @@
     display: block;
     width: fit-content;
     margin: 0 auto;
+    font-family: 'Indie Flower', cursive;
   }
   #signinButton p {
     text-align: center;
     padding: 10px 20px;
-    border: 1px solid #2b2118;
-    color: black;
+    border: 1px solid white;
+      color: white;
     font-size: 1.6em;
+  }
+  #juices{
+    width: 90%;
+    margin:0 auto;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5em;
+  }
+  #juices p{
+    line-height: 1.8em
   }
   @media only screen and (min-width: 500px) {
     #welcomeMemes {
@@ -100,6 +118,12 @@
       color: white;
       font-size: 1.6em;
     }
+    #juices{
+      width: 80%;
+    }
+    #juices p{
+      line-height: 2.3em;
+    }
   }
   @media only screen and (min-width: 900px) {
     #welcomeMemes {
@@ -118,14 +142,20 @@
       margin: auto;
       font-size: 3em;
     }
-
     #signinButton {
     text-decoration: none;
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-    grid-column:2;
-    grid-row:2;
-  }
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      grid-column:2;
+      grid-row:2;
+    }
+    #juices{
+      margin-top: 60px;
+      width: 50%;
+    }
+    #juices p{
+      line-height: 2.3em;
+    }
   }
 </style>
