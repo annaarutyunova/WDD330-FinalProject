@@ -20,6 +20,8 @@
 <div id="created-meme-display">
   <img src={createdMeme.url} alt="your created meme" />
   <button type="button" on:click={handleSave}>Save</button>
+  <a href="/profile/"><button type="button">Profile</button></a>
+
 </div>
 
 <style>
