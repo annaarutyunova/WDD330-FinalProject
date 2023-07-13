@@ -1,14 +1,23 @@
 <script>
-  import {userStore} from "../js/stores.mjs"
+  import { onMount } from 'svelte';
+  import { userStore } from '../js/stores.mjs';
+  import { getSession, logout } from '../js/supabaseClient.mjs';
+
+  function init() {
+    getSession();
+  }
+  onMount(init);
 </script>
 
 <ul>
   <li><a href="/">HOME</a></li>
-  {#if userStore.isLoggedIn} 
-  <li><a href="/create/">CREATE</a></li>
-  <li><a href="/profile/">PROFILE</a></li>
+  {#if $userStore.isLoggedIn}
+    <li><a href="/profile/">PROFILE</a></li>
+    <li><a href="/create/">CREATE</a></li>
+    <li><button type="button" on:click={logout}>LOGOUT</button></li>
+  {:else}
+    <li><a href="/login/">LOGIN</a></li>
   {/if}
-
 </ul>
 
 <style>

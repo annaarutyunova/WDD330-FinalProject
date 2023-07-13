@@ -1,11 +1,9 @@
 <script>
   import Nav from './Nav.svelte';
-  import NavBar from './NavBar.svelte';
 </script>
 
 <div id="header">
   <p id="logo"><a href="/">Memer</a></p>
-  <NavBar />
 </div>
 <Nav />
 

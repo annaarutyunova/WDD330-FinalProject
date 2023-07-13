@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { userStore, route } from './stores.mjs';
+import { userStore } from './stores.mjs';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
 export const supabase = createClient(supabaseUrl, supabaseKey);
@@ -19,16 +19,14 @@ export async function login({ email, password }) {
   });
   if (data) {
     userStore.set({ user: data.user, isLoggedIn: true });
-    // route.set(redirect);
-    // window.history.back();
+    window.location = '/profile/';
   }
   return { data, error };
 }
 export async function logout() {
   let { error } = await supabase.auth.signOut();
   userStore.set({ user: null, isLoggedIn: false });
-  // window.history.back();
-  // route.set("HOME");
+  window.location = '/';
   return { error };
 }
 export async function getSession() {
