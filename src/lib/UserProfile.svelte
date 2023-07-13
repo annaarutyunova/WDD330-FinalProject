@@ -27,7 +27,7 @@
       userProfile = await getUserProfile($userStore.user.id);
       memes = await getMeme($userStore.user.id);
       console.log(memes[0].url);
-      console.log(getUserProfile($userStore.user.id));
+      // console.log(getUserProfile($userStore.user.id));
       // console.log(userPprofile.full_name)
     }
 
@@ -35,11 +35,11 @@
   
     onMount(init);
   </script>
-  {#if userProfile.full_name != null}
+  <!-- {#if userProfile.full_name != null}
   <h2 id="welcome">Welcome {userProfile.full_name}</h2>
-  {:else}
+  {:else} -->
   <h2 id="welcome"> Welcome to your Profile</h2>
-  {/if}
+  <!-- {/if} -->
   
   <form on:submit|preventDefault={handleSubmit}>
     <div>
