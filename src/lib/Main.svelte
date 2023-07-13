@@ -31,7 +31,7 @@
   <h1 id="welcome">Welcome to the jungle of meme</h1>
   <img id="welcomeMeme1" src={meme} alt="random meme" />
   <img id="welcomeMeme2" src={meme2} alt="random meme" />
-  <a id="logoPhone" href="#"><p>Sign In</p></a>
+  <a id="signinButton" href="/"><p>Sign In</p></a>
 </div>
 
 <style>
@@ -53,13 +53,13 @@
   #welcomeMeme2 {
     display: none;
   }
-  #logoPhone {
+  #signinButton {
     text-decoration: none;
     display: block;
     width: fit-content;
     margin: 0 auto;
   }
-  #logoPhone p {
+  #signinButton p {
     text-align: center;
     padding: 10px 20px;
     border: 1px solid #2b2118;
@@ -93,7 +93,7 @@
       margin-top: 0;
       padding-top: 50px;
     }
-    #logoPhone p {
+    #signinButton p {
       text-align: center;
       padding: 10px 20px;
       border: 1px solid white;
@@ -118,5 +118,14 @@
       margin: auto;
       font-size: 3em;
     }
+
+    #signinButton {
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    grid-column:2;
+    grid-row:2;
+  }
   }
 </style>
