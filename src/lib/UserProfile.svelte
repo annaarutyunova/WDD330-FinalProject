@@ -37,25 +37,11 @@
   </script>
   {#if userProfile.full_name != null}
   <h2 id="welcome">Welcome {userProfile.full_name}</h2>
-  {:else if userProfile.username != null}
-  <h2 id="welcome"> Welcome {userProfile.username}</h2>
   {:else}
   <h2 id="welcome"> Welcome to your Profile</h2>
   {/if}
   
   <form on:submit|preventDefault={handleSubmit}>
-    <div>
-      <label for="website">Website</label><br>
-      <input
-        id="website"
-        name="website"
-        class="inputField"
-        type="text"
-        placeholder="Your website"
-        bind:value={profile.website}
-      />
-      <br>
-    </div>
     <div>
       <label for="fullName">Full Name</label><br>
       <input
