@@ -63,14 +63,13 @@
 <style>
   #images {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 30px;
     align-items: center;
     justify-items: center;
   }
   .image-block {
-    width: 200px;
-    height: 200px;
+    width: 80%;
     display: flex;
   }
   .image-block button {
@@ -79,5 +78,46 @@
   }
   .image-block img {
     width: 100%;
+  }
+  @media only screen and (min-width: 500px) {
+    #images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 30px;
+  }
+  .image-block {
+    width: 90%;
+    display: flex;
+  }
+  .image-block button {
+    background-color: #2b2118;
+    border: 0;
+  }
+  .image-block img {
+    width: 100%;
+  }
+  }
+  @media only screen and (min-width: 900px) {
+    #images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+  }
+  .image-block {
+    width: 90%;
+    display: flex;
+  }
+  .image-block button {
+    background-color: #2b2118;
+    border: 0;
+  }
+  .image-block img {
+    width: 100%;
+  }
   }
 </style>
