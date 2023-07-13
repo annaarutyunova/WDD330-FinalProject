@@ -39,13 +39,14 @@ export async function getSession() {
 }
 
 export async function getUserProfile(id) {
-  let { data: profiles, error } = await supabase
+  let { data, error } = await supabase
     .from('profiles')
     .select('*')
     .eq('id', id)
     .single();
-  console.log(profiles);
-  return profiles;
+  console.log(data);
+  return data
+  // return profiles;
 }
 export async function setUserProfile(id, profile) {
   const { data, error } = await supabase
