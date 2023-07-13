@@ -57,10 +57,12 @@ export async function setUserProfile(id, profile) {
 
 
 // Save meme to the database
-export async function saveMeme(link, name){
+export async function saveMeme(url, user_id){
   const { error } = await supabase
   .from('memes')
-  .insert({ "url": link, "name": name })
+  .insert( {"url": url, "user_id": user_id })
+  console.log("Meme url",url)
+  console.log("User_id",user_id)
   return error;
 }
 
