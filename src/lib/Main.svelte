@@ -31,7 +31,7 @@
   <h1 id="welcome">Welcome to the jungle of meme</h1>
   <img id="welcomeMeme1" src={meme} alt="random meme" />
   <img id="welcomeMeme2" src={meme2} alt="random meme" />
-  <a id="signinButton" href="/"><p>Sign In</p></a>
+  <a id="signinButton" href="/login/"><p>Sign In</p></a>
 </div>
 
 <style>

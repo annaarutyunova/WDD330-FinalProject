@@ -11,10 +11,10 @@
 <nav>
   <ul>
     {#if $userStore.isLoggedIn}
-      <li><a href="#profile" on:click={setRoute}>Profile</a></li>
-      <li><a href="#home" on:click={logout}>Logout</a></li>
+      <li><a href="/profile/" on:click={setRoute}>Profile</a></li>
+      <li><a href="/home/" on:click={logout}>Logout</a></li>
     {:else}
-      <li><a href="#login" on:click={setRoute}>Login</a></li>
+      <li><a href="/login/" on:click={setRoute}>Login</a></li>
     {/if}
   </ul>
 </nav>
