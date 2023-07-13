@@ -1,10 +1,11 @@
 <script>
-    import { getUserProfile, setUserProfile } from "../js/supabaseClient.mjs";
+    import { getUserProfile, setUserProfile, getMeme } from "../js/supabaseClient.mjs";
     import { userStore } from "../js/stores.mjs";
     import { onMount } from "svelte";
   
     let loading = false;
     let profile = {};
+    let memes = [];
     async function handleSubmit(e) {
       try {
         loading = true;
@@ -23,7 +24,11 @@
   
     async function init() {
       profile = await getUserProfile($userStore.user.id);
+      memes = await getMeme($userStore.user.id);
+      console.log(memes);
     }
+
+  
   
     onMount(init);
   </script>
@@ -63,3 +68,4 @@
       </button>
     </div>
   </form>
+

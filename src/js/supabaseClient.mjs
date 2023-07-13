@@ -71,8 +71,7 @@ export async function getMeme(id) {
   let { data: memes, error } = await supabase
     .from('memes')
     .select('*')
-    .eq('id', id)
-    .single();
+    .eq('user_id', id);
   console.log(memes);
   return memes;
 }
