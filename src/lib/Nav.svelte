@@ -3,23 +3,26 @@
   import { userStore } from '../js/stores.mjs';
   import { getSession, logout } from '../js/supabaseClient.mjs';
 
+  // reg expression
+  $:active = window.location.pathname.replace(/\//g,"")
+
   function init() {
     getSession();
   }
   function print(){
-    console.log("URL", windows.location)
+    console.log("URL", window.location)
   }
   onMount(init);
 </script>
 
 <ul>
-  <li><a href="/">HOME</a></li>
+  <li class:active={active == ""}><a href="/">HOME</a></li>
   {#if $userStore.isLoggedIn}
-    <li><a href="/profile/" on:click={print}>PROFILE</a></li>
-    <li><a href="/create/">CREATE</a></li>
+    <li class:active={active == "profile"}><a href="/profile/" on:click={print}>PROFILE</a></li>
+    <li class:active={active == "create"}><a href="/create/">CREATE</a></li>
     <li><button type="button" on:click={logout}>LOGOUT</button></li>
   {:else}
-    <li><a href="/login/">LOGIN</a></li>
+    <li class:active={active == "login"}><a href="/login/">LOGIN</a></li>
   {/if}
 </ul>
 
@@ -56,6 +59,9 @@
   ul li:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+  ul li.active{
+    border-bottom: 4px solid white;
   }
   button{
     background-color: transparent;
